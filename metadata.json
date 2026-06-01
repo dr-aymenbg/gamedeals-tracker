@@ -1,0 +1,6 @@
+{
+  "name": "Video Game Deals Tracker",
+  "description": "A modern, high-performance web application to track the latest video game deals, sales, and freebies across Steam, Epic Games, GOG, and more with translations in English, Arabic, and French.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
