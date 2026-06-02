@@ -36,8 +36,8 @@ export default function Dashboard() {
     searchQuery: '',
     storeIDs: [],
     minPrice: 0,
-    maxPrice: 80,
-    minDiscount: 1, // Default matching instructions: "أضف خصم من 1% إلى غاية 100% في كل المنصات"
+    maxPrice: 100,
+    minDiscount: 0, // Default matching instructions: "أضف خصم من 1% إلى غاية 100% في كل المنصات"
     maxDiscount: 100,
     sortBy: 'savings',
     desc: true
