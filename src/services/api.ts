@@ -33,6 +33,8 @@ export async function fetchStores(): Promise<Store[]> {
 export async function fetchDeals(filters: ActiveFilters, page: number = 0, pageSize: number = 50): Promise<Deal[]> {
   try {
     const params = new URLSearchParams();
+    // أضف هذا السطر ليجلب الألعاب المخفضة فعلياً
+params.append('onSale', '1');
     
     // Search query
     if (filters.searchQuery.trim()) {
