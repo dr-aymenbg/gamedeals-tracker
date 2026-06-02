@@ -57,21 +57,20 @@ body {
 .glow-hover:hover {
   box-shadow: 0 0 25px rgba(168, 85, 247, 0.4);
 }
-/* تثبيت القائمة في الأعلى تماماً */
-.search-container, .filters-wrapper {
+/* تثبيت أي حاوية في أعلى الصفحة */
+header, 
+div[class*="search"], 
+div[class*="filter"] {
   position: fixed !important;
   top: 0 !important;
   left: 0 !important;
   right: 0 !important;
-  z-index: 99999 !important;
+  z-index: 9999 !important;
   background-color: #0d1321 !important;
-  padding: 15px !important;
-  border-bottom: 2px solid #222d4a; /* خط بسيط للفصل بين البحث والألعاب */
+  padding: 10px !important;
 }
 
-/* دفع محتوى الألعاب للأسفل حتى لا يختفي خلف القائمة */
-@media (max-width: 768px) {
-  body {
-    padding-top: 200px !important; /* عدّل هذا الرقم إذا وجدت القائمة تغطي جزءاً كبيراً أو صغيراً */
-  }
+/* دفع المحتوى للأسفل لكي لا يختبئ */
+body {
+  padding-top: 250px !important; 
 }
