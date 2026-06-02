@@ -57,3 +57,9 @@ body {
 .glow-hover:hover {
   box-shadow: 0 0 25px rgba(168, 85, 247, 0.4);
 }
+/* حل مشكلة تداخل العناصر في الهواتف */
+@media (max-width: 768px) {
+  body {
+    padding-top: 150px !important;
+  }
+}
