@@ -44,9 +44,13 @@ export async function fetchDeals(filters: ActiveFilters, page: number = 0, pageS
       params.append('storeID', filters.storeIDs.join(','));
     }
     
-    // Price range filters
-    params.append('lowerPrice', filters.minPrice.toString());
-    params.append('upperPrice', filters.maxPrice.toString());
+ // Price range filters
+if (filters.minPrice > 0) {
+  params.append('lowerPrice', filters.minPrice.toString());
+}
+if (filters.maxPrice < 100) {
+  params.append('upperPrice', filters.maxPrice.toString());
+}
     
     // Sorting parameters
     // CheapShark sorting keys: Deal Rating, Title, Savings, Price
