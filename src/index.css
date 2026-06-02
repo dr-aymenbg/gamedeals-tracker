@@ -57,18 +57,21 @@ body {
 .glow-hover:hover {
   box-shadow: 0 0 25px rgba(168, 85, 247, 0.4);
 }
-/* اجعل منطقة البحث والفلترة ثابتة في الأعلى دائماً ومحمية */
+/* تثبيت القائمة في الأعلى تماماً */
 .search-container, .filters-wrapper {
-  position: sticky !important;
+  position: fixed !important;
   top: 0 !important;
-  z-index: 9999 !important; /* هذا الرقم الكبير يضمن أنها دائماً في المقدمة */
-  background-color: #0d1321 !important; /* نفس لون خلفية موقعك لكي لا يظهر شيء خلفها */
-  padding-bottom: 10px;
+  left: 0 !important;
+  right: 0 !important;
+  z-index: 99999 !important;
+  background-color: #0d1321 !important;
+  padding: 15px !important;
+  border-bottom: 2px solid #222d4a; /* خط بسيط للفصل بين البحث والألعاب */
 }
 
-/* إضافة مسافة للمحتوى لكي لا يختفي الجزء الأول من الألعاب خلف شريط البحث */
+/* دفع محتوى الألعاب للأسفل حتى لا يختفي خلف القائمة */
 @media (max-width: 768px) {
-  #root {
-    padding-top: 150px; /* اضبط هذا الرقم حسب طول قائمة البحث لديك */
+  body {
+    padding-top: 200px !important; /* عدّل هذا الرقم إذا وجدت القائمة تغطي جزءاً كبيراً أو صغيراً */
   }
 }
