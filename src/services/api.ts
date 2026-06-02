@@ -103,7 +103,7 @@ export async function fetchDeals(filters: ActiveFilters, page: number = 0, pageS
  */
 export async function fetchFreeGames(): Promise<Deal[]> {
   try {
-    const url = `${BASE_URL}/deals?upperPrice=0&pageSize=12&sortBy=Savings`;
+    const url = `${BASE_URL}/deals?upperPrice=0&pageSize=502&sortBy=Savings`;
     const response = await fetch(url);
     if (!response.ok) {
       throw new Error(`Failed to fetch free games: ${response.statusText}`);
