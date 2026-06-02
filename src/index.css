@@ -57,9 +57,18 @@ body {
 .glow-hover:hover {
   box-shadow: 0 0 25px rgba(168, 85, 247, 0.4);
 }
-/* حل مشكلة تداخل العناصر في الهواتف */
+/* اجعل منطقة البحث والفلترة ثابتة في الأعلى دائماً ومحمية */
+.search-container, .filters-wrapper {
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 9999 !important; /* هذا الرقم الكبير يضمن أنها دائماً في المقدمة */
+  background-color: #0d1321 !important; /* نفس لون خلفية موقعك لكي لا يظهر شيء خلفها */
+  padding-bottom: 10px;
+}
+
+/* إضافة مسافة للمحتوى لكي لا يختفي الجزء الأول من الألعاب خلف شريط البحث */
 @media (max-width: 768px) {
-  body {
-    padding-top: 150px !important;
+  #root {
+    padding-top: 150px; /* اضبط هذا الرقم حسب طول قائمة البحث لديك */
   }
 }
